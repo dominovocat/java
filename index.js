@@ -1,22 +1,19 @@
-let Firstnumber = 45;
-let Twonumb = 12;
+//  let userInput = prompt('Enter number')
+// console.log(userInput);
+// console.log(isNaN(Number(userInput)));
+// console.log()
 
-console.log(Firstnumber + Twonumb);
-console.log(Firstnumber - Twonumb);
-console.log(Firstnumber / Twonumb);
-console.log(Firstnumber * Twonumb);
-console.log(Firstnumber % Twonumb);
 
-let numbTwo = 101;
-console.log(numbTwo);
-let TorF = true;
-console.log(TorF);
-let java = "Java";
-console.log(java);
-let nameUser = "Elon musk";
-console.log(nameUser);
 
-let number = 23;
-number+=11
-console.log(number);
 
+const firstFunction = function(val1,val2){
+  if(typeof val1===typeof val2){
+    if(val1>val2){
+      return val1;
+    }else{
+      return val2
+    }
+  }
+  return null;
+}
+ console.log(firstFunction('100','12'));
