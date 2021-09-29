@@ -3,8 +3,6 @@
 // console.log(isNaN(Number(userInput)));
 // console.log()
 
-
-
 // const firstFunction = function (val1, val2) {
 //   if (typeof val1 === typeof val2) {
 //     if (val1 > val2) {
@@ -25,9 +23,6 @@
 // }
 // console.log(functionTwo(14));
 
-
-
-
 // let sideSquare = prompt('Enter side square', '0');
 
 // const getPerimetrSquare = function (side){
@@ -35,9 +30,7 @@
 //     return null;
 //   }
 //   return 4*side;
-// } 
-
-
+// }
 
 // const isNumber = function(value){
 //   if(value === '' || value === null || isNaN(Number(value))
@@ -52,10 +45,18 @@
 // alert(getPerimetrSquare());
 // alert(isNumber());
 
-let userAdult = prompt('write your age', '0');
+// let userAdult = prompt("write your age", "0");
 
-const Adult = function(userAdult){
-  return userAdult>=18;
+// const Adult = function (userAdult) {
+//   return userAdult >= 18;
+// };
+// console.log(Adult(userAdult));
+
+
+
+const checkMultipliciti = function (val1, val2) {
+  if(val1%val2===0){
+    return true;
+  }
 }
-console.log(Adult(userAdult));
-
+console.log(checkMultipliciti(9,3));
