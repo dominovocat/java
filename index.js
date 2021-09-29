@@ -52,11 +52,21 @@
 // };
 // console.log(Adult(userAdult));
 
+// const checkMultipliciti = function (val1, val2) {
+//   if(val1%val2===0){
+//     return true;
+//   }
+// }
+// console.log(checkMultipliciti(9,3));
 
+// let userInput = prompt('write somethink');
 
-const checkMultipliciti = function (val1, val2) {
-  if(val1%val2===0){
-    return true;
-  }
-}
-console.log(checkMultipliciti(9,3));
+// const checkWrite = function (value){
+//   return(value>20 && value%7===0);
+// }
+// console.log(checkWrite(userInput));
+
+// const MMM = function (m1,m2,m3) {
+//   return (m1+m2>m3 && m1+m3>m2 && m3+m2>m1);
+// }
+// console.log(MMM(4,19,6))
