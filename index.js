@@ -70,3 +70,26 @@
 //   return (m1+m2>m3 && m1+m3>m2 && m3+m2>m1);
 // }
 // console.log(MMM(4,19,6))
+
+/**
+ * 
+ * @param {number} a 
+ * @param {number} b 
+ * @param {number} c 
+ * @returns {null | number | Array}
+ */
+const solveSquareEquation = function(a,b,c){
+  const D = b*b-4*a*c;
+  if(D<0){
+    return null;
+  }
+  if(D===0){
+    const X = -b/(2*a);
+    return [X,X];
+  }
+  const X1 = (-b + D**0.5) / (2*a);
+  const X2 = (-b + D**0.5) / (2*a);
+  return [X1,X2];
+}
+console.log(solveSquareEquation(1,12,36));
+console.log(solveSquareEquation(5,3,7));
