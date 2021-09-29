@@ -28,26 +28,34 @@
 
 
 
-let sideSquare = prompt('Enter side square', '0');
+// let sideSquare = prompt('Enter side square', '0');
 
-const getPerimetrSquare = function (side){
-  if(isNaN(side)){
-    return null;
-  }
-  return 4*side;
-} 
+// const getPerimetrSquare = function (side){
+//   if(isNaN(side)){
+//     return null;
+//   }
+//   return 4*side;
+// } 
 
 
 
-const isNumber = function(value){
-  if(value === '' || value === null || isNaN(Number(value))
-  ){
-    return NaN;
-  }
-  return Number(value);
+// const isNumber = function(value){
+//   if(value === '' || value === null || isNaN(Number(value))
+//   ){
+//     return NaN;
+//   }
+//   return Number(value);
+// }
+// console.log(getPerimetrSquare());
+// let changeSideSquare = (isNumber(sideSquare));
+// console.log(getPerimetrSquare(changeSideSquare));
+// alert(getPerimetrSquare());
+// alert(isNumber());
+
+let userAdult = prompt('write your age', '0');
+
+const Adult = function(userAdult){
+  return userAdult>=18;
 }
-console.log(getPerimetrSquare());
-let changeSideSquare = (isNumber(sideSquare));
-console.log(getPerimetrSquare(changeSideSquare));
-alert(getPerimetrSquare());
-alert(isNumber());
+console.log(Adult(userAdult));
+
