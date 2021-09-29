@@ -5,15 +5,49 @@
 
 
 
+// const firstFunction = function (val1, val2) {
+//   if (typeof val1 === typeof val2) {
+//     if (val1 > val2) {
+//       return val1;
+//     } else {
+//       return val2;
+//     }
+//   }
+//   return null;
+// };
+// console.log(firstFunction("100", "12"));
 
-const firstFunction = function(val1,val2){
-  if(typeof val1===typeof val2){
-    if(val1>val2){
-      return val1;
-    }else{
-      return val2
-    }
+// const functionTwo = function (value) {
+//   if (typeof value === 'number') {
+//       return value % 2 === 0;
+//   }
+//   return null;
+// }
+// console.log(functionTwo(14));
+
+
+
+
+let sideSquare = prompt('Enter side square', '0');
+
+const getPerimetrSquare = function (side){
+  if(isNaN(side)){
+    return null;
   }
-  return null;
+  return 4*side;
+} 
+
+
+
+const isNumber = function(value){
+  if(value === '' || value === null || isNaN(Number(value))
+  ){
+    return NaN;
+  }
+  return Number(value);
 }
- console.log(firstFunction('100','12'));
+console.log(getPerimetrSquare());
+let changeSideSquare = (isNumber(sideSquare));
+console.log(getPerimetrSquare(changeSideSquare));
+alert(getPerimetrSquare());
+alert(isNumber());
