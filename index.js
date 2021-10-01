@@ -71,25 +71,53 @@
 // }
 // console.log(MMM(4,19,6))
 
-/**
- * 
- * @param {number} a 
- * @param {number} b 
- * @param {number} c 
- * @returns {null | number | Array}
- */
-const solveSquareEquation = function(a,b,c){
-  const D = b*b-4*a*c;
-  if(D<0){
-    return null;
+// /**
+//  *
+//  * @param {number} a
+//  * @param {number} b
+//  * @param {number} c
+//  * @returns {null | number | Array}
+//  */
+// const solveSquareEquation = function(a,b,c){
+//   const D = b*b-4*a*c;
+//   if(D<0){
+//     return null;
+//   }
+//   if(D===0){
+//     const X = -b/(2*a);
+//     return [X,X];
+//   }
+//   const X1 = (-b + D**0.5) / (2*a);
+//   const X2 = (-b + D**0.5) / (2*a);
+//   return [X1,X2];
+// }
+// console.log(solveSquareEquation(1,12,36));
+// console.log(solveSquareEquation(5,3,7));
+
+
+// while (true) {
+//   const password = prompt("writte here");
+//   if (password === GOOD_PASSWORD) {
+//     break;
+//   }
+// }
+
+
+let count = MAX_COUNT_TRY;
+while(count>0){
+  const password = prompt('Enter password');
+  count--;
+  if(password===GOOD_PASSWORD){
+    alert('Thanks');
+    break;
   }
-  if(D===0){
-    const X = -b/(2*a);
-    return [X,X];
+  if(count===0){
+    alert('try is over');
+    break;
   }
-  const X1 = (-b + D**0.5) / (2*a);
-  const X2 = (-b + D**0.5) / (2*a);
-  return [X1,X2];
+  alert('count number:'+count);
 }
-console.log(solveSquareEquation(1,12,36));
-console.log(solveSquareEquation(5,3,7));
+  
+
+
+
