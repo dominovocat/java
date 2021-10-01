@@ -94,7 +94,6 @@
 // console.log(solveSquareEquation(1,12,36));
 // console.log(solveSquareEquation(5,3,7));
 
-
 // while (true) {
 //   const password = prompt("writte here");
 //   if (password === GOOD_PASSWORD) {
@@ -102,22 +101,48 @@
 //   }
 // }
 
+// let count = MAX_COUNT_TRY;
+// while(count>0){
+//   const password = prompt('Enter password');
+//   count--;
+//   if(password===GOOD_PASSWORD){
+//     alert('Thanks');
+//     break;
+//   }
+//   if(count===0){
+//     alert('try is over');
+//     break;
+//   }
+//   alert('count number:'+count);
+// }
 
-let count = MAX_COUNT_TRY;
-while(count>0){
-  const password = prompt('Enter password');
-  count--;
-  if(password===GOOD_PASSWORD){
-    alert('Thanks');
-    break;
+// let num = 10;
+// do{
+//   console.log(num);
+// }while(num>22);
+
+// for(let i=0; i<MAX_COUNT_TRY; i++){
+//   const password = prompt();
+//   if(password===GOOD_PASSWORD){
+//     break;
+//   }
+//   if(i+1===MAX_COUNT_TRY){
+//     alert('try is over')
+//   }
+// }
+const calcFactorial = function (number = 2) {
+  if (number < 0) {
+    return null;
   }
-  if(count===0){
-    alert('try is over');
-    break;
+  if (number === 0 || number === 1) {
+    return 1;
   }
-  alert('count number:'+count);
-}
-  
-
-
-
+  if(number>100){
+    return false;
+  }
+  let result = 1n;
+  for (let i = 1; i <= number; i++) {
+    result *= BigInt(i);
+  }
+  return result;
+};
