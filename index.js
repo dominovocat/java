@@ -215,7 +215,7 @@ this.name = name;
 this.sname = sname;
 this.age = age;
 this.say = function(){
-  return name + sname;
+  return name+' '+sname;
   }
 };
 
@@ -223,3 +223,84 @@ const Max = new Personal('Max','Garfield',24,);
 const Andry = new Personal('Andry','Smith',30);
 const Eddi = new Personal('Eddi','Cruy',28);
 console.log(Eddi.say());
+
+function Country(name,population,area){
+  this.name = name;
+  this.population = population;
+  this.area = area;
+  this.getDensity = function(){
+    return (this.population/this.area);
+  }
+};
+
+const Italy = new Country('Italy', 59000000,301340);
+console.log(Italy.getDensity());
+
+
+function Auto(name,maxSpeed){
+  this.name = name;
+  this.maxSpeed = maxSpeed;
+  this.speed = 0;
+
+  this.accelerate = function(value){
+   if(value<0){
+     return false
+   }
+    this.speed += value;
+    if(this.speed>this.maxSpeed){
+      this.speed = this.maxSpeed;
+    }
+    return this.speed;
+  }
+  this.deaccelerate = function(value){
+    if(value<0){
+      return false;
+    }
+    this.speed -= value;
+    if(this.speed<0) 
+    this.speed = 0;
+    return this.speed;
+  }
+  this.stop = function(){
+    return (this.speed = 0);
+  }
+}
+
+const Ambulance = new Auto('Ambulance',50)
+console.log(Ambulance.accelerate(150));
+
+
+function CoffeeMachine(brand,maxVolume){
+  this.brand = brand;
+  this.maxVolume = maxVolume;
+  this.Volume = 0;
+
+  this.addWater = function(value){
+    if(value>this.maxVolume){
+      return false;
+    }    
+    this.Volume+=value;
+    if(this.Volume>this.maxVolume){
+      return (this.Volume=this.maxVolume);
+    }
+    if(value>=this.Volume){
+      return (this.Volume=value);
+    }
+  }
+  
+  this.makeCoffee = function(value){
+    if(value<=0 || this.Volume<value){
+      return false;
+    }
+    this.Volume -=value;
+    if(this.Volume-value){
+    return this.Volume
+    }
+  }
+}
+
+const Coffee = new CoffeeMachine('chepuha', 50);
+
+
+console.log(Coffee.addWater(40));
+console.log(Coffee.makeCoffee(100))
