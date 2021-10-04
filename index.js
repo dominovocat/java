@@ -122,7 +122,7 @@
 // }while(num>22);
 
 // for(let i=0; i<MAX_COUNT_TRY; i++){
-//   const password = prompt();
+//   const password = prompt('write here');
 //   if(password===GOOD_PASSWORD){
 //     break;
 //   }
@@ -131,21 +131,95 @@
 //   }
 // }
 
-const number = prompt()
-const calcFactorial = function (number) {
-  if (number < 0) {
-    return null;
+// const number = prompt()
+// const calcFactorial = function (number) {
+//   if (number < 0) {
+//     return null;
+//   }
+//   if (number === 0 || number === 1) {
+//     return 1;
+//   }
+//   if(number>100){
+//     return false;
+//   }
+//   let result = 1n;
+//   for (let i = 1; i <= number; i++) {
+//     result *= BigInt(i);
+//   }
+//   return result;
+// }
+// console.log(calcFactorial(number));
+
+// const objectCat = {
+//   name: "Cat",
+//   isMale: false,
+//   color: "grey",
+//   breed: "yard",
+//   age: 2,
+//   waight: 7,
+//   isSlipping: true,
+//   say: function () {
+//     return "meow";
+//   },
+//   run: function () {},
+// };
+
+// console.log(objectCat.say());
+
+// objectCat.countLegs = 4;
+
+// console.log(objectCat);
+// console.log(objectCat.color);
+// objectCat.age++;
+// console.log(objectCat.age);
+// delete objectCat.isSlipping;
+// console.log(objectCat.isSlipping);
+
+// const dog = {
+//   name: "Bulba",
+//   isMale: "transgender",
+//   color: "pink",
+//   breed: "neBinarniy",
+//   age: 46,
+// };
+// console.log(dog);
+
+// const objectCat2 = {
+//   name: "Cat",
+//   isMale: false,
+//   color: "grey",
+//   breed: "yard",
+//   age: 2,
+//   waight: 7,
+//   isSlipping: true,
+//   say: function () {
+//     return "meow";
+//   },
+//   run: function () {},
+// };
+
+
+// function ObjectCat(name, isMale, color, breed, age) {
+
+// }
+
+// const newCat = new ObjectCat('Cat',false,'grey','yard',2);
+// const nCat = new ObjectCat('Muha',false,'black','yard',7);
+
+// console.log(nCat.name+' says'+nCat.say());
+
+
+function Personal(name, sname, age,){
+
+this.name = name;
+this.sname = sname;
+this.age = age;
+this.say = function(){
+  return name + sname;
   }
-  if (number === 0 || number === 1) {
-    return 1;
-  }
-  if(number>100){
-    return false;
-  }
-  let result = 1n;
-  for (let i = 1; i <= number; i++) {
-    result *= BigInt(i);
-  }
-  return result;
-}
-console.log(calcFactorial(number));
+};
+
+const Max = new Personal('Max','Garfield',24,);
+const Andry = new Personal('Andry','Smith',30);
+const Eddi = new Personal('Eddi','Cruy',28);
+console.log(Eddi.say());
