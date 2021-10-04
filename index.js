@@ -130,7 +130,9 @@
 //     alert('try is over')
 //   }
 // }
-const calcFactorial = function (number = 2) {
+
+const number = prompt()
+const calcFactorial = function (number) {
   if (number < 0) {
     return null;
   }
@@ -145,4 +147,5 @@ const calcFactorial = function (number = 2) {
     result *= BigInt(i);
   }
   return result;
-};
+}
+console.log(calcFactorial(number));
