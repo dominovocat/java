@@ -293,9 +293,8 @@ function CoffeeMachine(brand,maxVolume){
       return false;
     }
     this.Volume -=value;
-    if(this.Volume-value){
-    return this.Volume
-    }
+    return this.Volume;
+    
   }
 }
 
@@ -303,4 +302,4 @@ const Coffee = new CoffeeMachine('chepuha', 50);
 
 
 console.log(Coffee.addWater(40));
-console.log(Coffee.makeCoffee(100))
+console.log(Coffee.makeCoffee(30))
