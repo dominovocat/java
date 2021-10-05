@@ -320,22 +320,35 @@
 
 
 
-const checkMath = function (num1=5,num2=4,operator='*'){
-  switch(operator){
-    case '*':
-      result=num1*num2;
-      break;
-      default:
-      break;
-  }
-  if(result===null || isNaN(result)){
-    return 'error'
-  }
-  while(true){
-    const quetion = prompt(num1+operator+num2);
-    if(Number(quetion)===result){
-      return alert('you are the best chepuha i ever seen')
-    }
-  }
+// const checkMath = function (num1=5,num2=4,operator='*'){
+//   switch(operator){
+//     case '*':
+//       result=num1*num2;
+//       break;
+//       default:
+//       break;
+//   }
+//   if(result===null || isNaN(result)){
+//     return 'error'
+//   }
+//   while(true){
+//     const quetion = prompt(num1+operator+num2);
+//     if(Number(quetion)===result){
+//       return alert('you are the best chepuha i ever seen')
+//     }
+//   }
+// }
+// console.log(checkMath(5,4,'*'))
+
+
+const user = {
+  firstName: 'Elon',
+  lastName: 'Musk',
+  age: 50,
+  isMale:true,
 }
-console.log(checkMath(5,4,'*'))
+
+const sayHello = function(obj){
+return `Hello, ${obj.firstName} ${obj.lastName}!`
+}
+console.log(sayHello(user));
