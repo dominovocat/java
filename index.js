@@ -341,14 +341,77 @@
 // console.log(checkMath(5,4,'*'))
 
 
-const user = {
-  firstName: 'Elon',
-  lastName: 'Musk',
-  age: 50,
-  isMale:true,
-}
+// const user = {
+//   firstName: 'Elon',
+//   lastName: 'Musk',
+//   age: 50,
+//   isMale:true,
+// }
 
-const sayHello = function(obj){
-return `Hello, ${obj.firstName} ${obj.lastName}!`
+// const sayHello = function(obj){
+// return `Hello, ${obj.firstName} ${obj.lastName}!`
+// }
+// console.log(sayHello(user));
+
+// const obj ={};
+// obj.prob1 = 12;
+// obj['prob2'] = 22;
+
+// const createMultiplicateTable = function(){
+//   const table = {};
+// for(let i=1; i<10; i++){
+//   for(let j=1; j<10; j++){
+//     table[`${i} * ${j} = `] = i*j;
+//   }
+// }
+//   return table;
+// }
+// console.log(createMultiplicateTable())
+
+
+
+// const createMultiplicateTable2 = function(min=3,max=5){
+//   const table = {};
+// for(let i=min; i<=max; i++){
+//   for(let j=1; j<10; j++){
+//     table[`${i} * ${j} = `] = i*j;
+//   }
+// }
+//   return table;
+// }
+// console.log(createMultiplicateTable2())
+
+  
+// const fun = function(str,obj){
+//   return obj[str];
+// }
+// const str = '3 * 3 = ';
+// const table = createMultiplicateTable();
+// console.log(fun(str,table))
+
+
+function MyArrayProto(){
+  this.push = function(){
+    for(let i = 0;i < arguments.length; i++){
+      this[this.length++] = arguments[i];
+    }
+    return this.length;
+  }
+  this.pop = function(){
+    if(this.length===0){
+    return;
+    }
+    const item = this[--this.length];
+    delete this[this.length];
+    return item;
+  }
 }
-console.log(sayHello(user));
+function MyArray(){
+  this.length = 0;
+  for (let i = 0; i < arguments.length; i++){
+    this.push(arguments[i]);
+  }
+}
+MyArray.prototype = new MyArrayProto();
+
+const myArray = new MyArray();
