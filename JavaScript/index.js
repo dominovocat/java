@@ -497,9 +497,9 @@ function UserPrototype(){
 
 User.prototype = new UserPrototype();
 
-const Max = new User("Max", "Garfield",24,'@gmail');
-const Andry = new User("Andry", "Smith",30,'@list');
-const Eddi = new User("Eddi", "Cruy",28,'@mail');
+// const Max = new User("Max", "Garfield",24,'@gmail');
+// const Andry = new User("Andry", "Smith",30,'@list');
+// const Eddi = new User("Eddi", "Cruy",28,'@mail');
 
 
 function createRandomUsers(amount = 3){
@@ -516,5 +516,35 @@ function createRandomUsers(amount = 3){
   }
   return db;
 }
-const users = createRandomUsers(50);
-console.table(users)
+const users = createRandomUsers(20);
+users.forEach(function(user){
+  user.isSubscribe = (Math.random()>0.5)
+});
+console.table(users);
+
+
+// Name
+
+const fullNameUsers = users.map(function callback(user){
+return user.fullName();
+});
+console.table(fullNameUsers);
+
+
+
+// Age
+
+function isOldUsers(user){
+   return user.age>=Old_Age;
+}
+const oldUsers = users.filter(isOldUsers);
+console.table(oldUsers);
+
+
+// Сразу 3 тега поиска!!!
+
+function femaleAge(user){
+  return user.age<=female_Age && user.isMale===false && user.isSubscribe;
+};
+const femaleUser = users.filter(femaleAge);
+console.table(femaleUser);
