@@ -390,6 +390,94 @@
 // console.log(fun(str,table))
 
 
+// const student1 = {
+//   id:1,
+//   firstName:'Elon',
+//   lastName:'Musk',
+//   age:50,
+//   isMale:true,
+//   toString:function(){
+//     return `${student1.firstName} ${student1.lastName}`;
+//   }
+// };
+
+// const student2 = {
+//   id:2,
+//   firstName:'Tim',
+//   lastName:'Li',
+//   age:65,
+//   isMale:true,
+// };
+
+
+
+// const rabbit = {
+//   nameRabbit:'Dedula',
+//   jump:function(){
+//     return 2
+//   }
+// };
+
+// const rabbitDom = {
+//   homeName:'Vnuchok',
+//   pet:function(){
+//     return `pet me`
+//   }
+// };
+
+// const magicRabbit = {
+//   say:function(){
+//     return `What are you looking for?`
+//   }
+// };
+
+// magicRabbit.__proto__ = rabbitDom;
+// rabbitDom.__proto__ = rabbit;
+
+
+// function LadderPrototype(){
+//   this.up = function (){
+//     for(let i = 0;i < value; i++){
+//       this[this.value++];
+//     }
+//     return this.value;
+//   }
+//   this.down = function(){
+//     for(let i = 0;i < this.value; i--){
+//       this[this.value--];
+//     }
+//     return this.value;
+//   }
+//   this.showStep = function(){
+//     return this.showStep;
+//   }
+// }
+
+// function Ladder(){
+//   this.value = 0;
+// };
+
+// function LadderPrototype(){
+//   this.up = function(){
+//      this.value++;
+//      return this;
+//   }
+//   this.down = function(){
+//     this.value--;
+//     return this;
+//   }
+//   this.showStep = function(){
+//     return this.value;
+//   }
+// };
+
+// Ladder.prototype = new LadderPrototype();
+
+// const ladder1 = new Ladder();
+
+
+// const step = ladder1.up().up().showStep();
+
 
 
 
