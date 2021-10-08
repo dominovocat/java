@@ -479,5 +479,11 @@
 // const step = ladder1.up().up().showStep();
 
 
+function saySomething(howSay,whatSay){
+  howSay(whatSay);
+}console.log(saySomething);
+saySomething(console.log,'chepuha');
+
+// saySomething(alert,'chepuha')
 
 
