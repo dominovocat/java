@@ -198,7 +198,6 @@
 //   run: function () {},
 // };
 
-
 // function ObjectCat(name, isMale, color, breed, age) {
 
 // }
@@ -207,7 +206,6 @@
 // const nCat = new ObjectCat('Muha',false,'black','yard',7);
 
 // console.log(nCat.name+' says'+nCat.say());
-
 
 // function Personal(name, sname, age,){
 
@@ -236,7 +234,6 @@
 // const Italy = new Country('Italy', 59000000,301340);
 // console.log(Italy.getDensity());
 
-
 // function Auto(name,maxSpeed){
 //   this.name = name;
 //   this.maxSpeed = maxSpeed;
@@ -257,7 +254,7 @@
 //       return false;
 //     }
 //     this.speed -= value;
-//     if(this.speed<0) 
+//     if(this.speed<0)
 //     this.speed = 0;
 //     return this.speed;
 //   }
@@ -269,7 +266,6 @@
 // const Ambulance = new Auto('Ambulance',50)
 // console.log(Ambulance.accelerate(150));
 
-
 // function CoffeeMachine(brand,maxVolume){
 //   this.brand = brand;
 //   this.maxVolume = maxVolume;
@@ -278,7 +274,7 @@
 //   this.addWater = function(value){
 //     if(value>this.maxVolume){
 //       return false;
-//     }    
+//     }
 //     this.Volume+=value;
 //     if(this.Volume>this.maxVolume){
 //       return (this.Volume=this.maxVolume);
@@ -287,19 +283,18 @@
 //       return (this.Volume=value);
 //     }
 //   }
-  
+
 //   this.makeCoffee = function(value){
 //     if(value<=0 || this.Volume<value){
 //       return false;
 //     }
 //     this.Volume -=value;
 //     return this.Volume;
-    
+
 //   }
 // }
 
 // const Coffee = new CoffeeMachine('chepuha', 50);
-
 
 // console.log(Coffee.addWater(40));
 // console.log(Coffee.makeCoffee(30))
@@ -316,9 +311,6 @@
 //   }
 // }
 // numbers(50,20,3);
-
-
-
 
 // const checkMath = function (num1=5,num2=4,operator='*'){
 //   switch(operator){
@@ -339,7 +331,6 @@
 //   }
 // }
 // console.log(checkMath(5,4,'*'))
-
 
 // const user = {
 //   firstName: 'Elon',
@@ -368,8 +359,6 @@
 // }
 // console.log(createMultiplicateTable())
 
-
-
 // const createMultiplicateTable2 = function(min=3,max=5){
 //   const table = {};
 // for(let i=min; i<=max; i++){
@@ -381,14 +370,12 @@
 // }
 // console.log(createMultiplicateTable2())
 
-  
 // const fun = function(str,obj){
 //   return obj[str];
 // }
 // const str = '3 * 3 = ';
 // const table = createMultiplicateTable();
 // console.log(fun(str,table))
-
 
 // const student1 = {
 //   id:1,
@@ -408,8 +395,6 @@
 //   age:65,
 //   isMale:true,
 // };
-
-
 
 // const rabbit = {
 //   nameRabbit:'Dedula',
@@ -433,7 +418,6 @@
 
 // magicRabbit.__proto__ = rabbitDom;
 // rabbitDom.__proto__ = rabbit;
-
 
 // function LadderPrototype(){
 //   this.up = function (){
@@ -475,15 +459,62 @@
 
 // const ladder1 = new Ladder();
 
-
 // const step = ladder1.up().up().showStep();
 
+// function saySomething(howSay,whatSay){
+//   howSay(whatSay);
+// }console.log(saySomething);
+// saySomething(console.log,'chepuha');
 
-function saySomething(howSay,whatSay){
-  howSay(whatSay);
-}console.log(saySomething);
-saySomething(console.log,'chepuha');
+// // saySomething(alert,'chepuha')
 
-// saySomething(alert,'chepuha')
+// const nums = [1,2,3,4,5];
+// function square(n){
+//   console.log(n*n);
+//   return n*n;
+// }
+
+// for(let i=0;i<nums.length;i++){
+//   square(nums[i]);
+// }
+
+// nums.forEach(square);
+
+function User(name, sname, age,isMale,email,isSubscribe = false) {
+  this.name = name;
+  this.sname = sname;
+  this.age = age;
+  this.isMale = isMale;
+  this.email = email;
+  this.isSubscribe = isSubscribe;
+}
+
+function UserPrototype(){
+  this.fullName = function(){
+    return `${this.name} ${this.sname}`;
+  }
+}
+
+User.prototype = new UserPrototype();
+
+const Max = new User("Max", "Garfield",24,'@gmail');
+const Andry = new User("Andry", "Smith",30,'@list');
+const Eddi = new User("Eddi", "Cruy",28,'@mail');
 
 
+function createRandomUsers(amount = 3){
+  const db = [];
+  for(let i=0;i<amount;i++){
+    const user = new User(
+      `Name${i}`,
+      `SName${i}`,
+      Math.ceil(Math.random()*60+20),
+      Math.random()>0.5,
+      `email${i}@gmail.com`
+    );
+    db.push(user);
+  }
+  return db;
+}
+const users = createRandomUsers(50);
+console.table(users)
