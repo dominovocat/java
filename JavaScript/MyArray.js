@@ -43,6 +43,26 @@ function MyArrayProto(){
     }
     return result;
   }
+  this.map = function(func){
+    const result = new MyArray();
+    for(let i=0; i<this.length;i++){
+      if(func(this[i])){
+        return result;
+      }
+    }
+  }
+  this.shift = function(){
+    if(this.length===0){
+      return;
+      }
+      const item = this[--this.length];
+      delete this[this.length];
+      return item;
+  }
+  this.concat = function(){
+    const result = new MyArray();
+    
+  }
 }
 function MyArray(){
   this.length = 0;
