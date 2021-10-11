@@ -480,76 +480,125 @@
 
 // nums.forEach(square);
 
-function User(name, sname, age,isMale,email,isSubscribe = false) {
-  this.name = name;
-  this.sname = sname;
-  this.age = age;
-  this.isMale = isMale;
-  this.email = email;
-  this.isSubscribe = isSubscribe;
-}
+// function User(name, sname, age,isMale,email,isSubscribe = false) {
+//   this.name = name;
+//   this.sname = sname;
+//   this.age = age;
+//   this.isMale = isMale;
+//   this.email = email;
+//   this.isSubscribe = isSubscribe;
+// }
 
-function UserPrototype(){
-  this.fullName = function(){
-    return `${this.name} ${this.sname}`;
+// function UserPrototype(){
+//   this.fullName = function(){
+//     return `${this.name} ${this.sname}`;
+//   }
+// }
+
+// User.prototype = new UserPrototype();
+
+// // const Max = new User("Max", "Garfield",24,'@gmail');
+// // const Andry = new User("Andry", "Smith",30,'@list');
+// // const Eddi = new User("Eddi", "Cruy",28,'@mail');
+
+// function createRandomUsers(amount = 3){
+//   const db = [];
+//   for(let i=0;i<amount;i++){
+//     const user = new User(
+//       `Name${i}`,
+//       `SName${i}`,
+//       Math.ceil(Math.random()*60+20),
+//       Math.random()>0.5,
+//       `email${i}@gmail.com`
+//     );
+//     db.push(user);
+//   }
+//   return db;
+// }
+
+// const users = createRandomUsers(20);
+// users.forEach(function(user){
+//   user.isSubscribe = (Math.random()>0.5)
+// });
+// console.table(users);
+
+// // Name
+
+// const fullNameUsers = users.map(function callback(user){
+// return user.fullName();
+// });
+// console.table(fullNameUsers);
+
+// // Age
+
+// function isOldUsers(user){
+//    return user.age>=Old_Age;
+// }
+// const oldUsers = users.filter(isOldUsers);
+// console.table(oldUsers);
+
+// // Сразу 3 тега поиска!!!
+
+// function femaleAge(user){
+//   return user.age<=female_Age && user.isMale===false && user.isSubscribe;
+// };
+// const femaleUser = users.filter(femaleAge);
+// console.table(femaleUser);
+
+// const users = createRandomUsers(50);
+// console.table(users);
+
+"use strict";
+
+// const site = {
+//   title: "Green site",
+//   headers: ["Header1", "Header2", "Header3", "Header4"],
+//   showHeaders() {
+//     this.headers.forEach((header, index) => {
+//       console.log(this.title);
+//       console.log(index + 1, header);
+//     });
+//   },
+// };
+// site.showHeaders();
+
+// // неограниченное количество аргументов
+
+// const sumNumbers = (...args) => {
+//   let result = null;
+//   // for (let i = 0; i < args.length; i++) {
+//   //   result += args[i];
+//   // }
+//   args.forEach((n) => {
+//     result += n;
+//   });
+//   return result;
+// };
+
+// const sum2 = (...args) => args.reduce((result, value) => result + value);
+
+// function recursion(num) {
+
+//   if (num === 0) {
+//     return;
+//   }
+//   console.log(num);
+//   recursion(num - 1);
+// }
+// recursion(4);
+
+const power = (num,exp)=>{
+  if(exp===1){
+    return num;
   }
+  return -num * power(num,exp-1)
 }
+console.log(power(-3,4));
 
-User.prototype = new UserPrototype();
-
-// const Max = new User("Max", "Garfield",24,'@gmail');
-// const Andry = new User("Andry", "Smith",30,'@list');
-// const Eddi = new User("Eddi", "Cruy",28,'@mail');
-
-
-function createRandomUsers(amount = 3){
-  const db = [];
-  for(let i=0;i<amount;i++){
-    const user = new User(
-      `Name${i}`,
-      `SName${i}`,
-      Math.ceil(Math.random()*60+20),
-      Math.random()>0.5,
-      `email${i}@gmail.com`
-    );
-    db.push(user);
+const factorial = (num) => {
+  if (num === 0 && 1) {
+    return 1;
   }
-  return db;
-}
-
-const users = createRandomUsers(20);
-users.forEach(function(user){
-  user.isSubscribe = (Math.random()>0.5)
-});
-console.table(users);
-
-
-// Name
-
-const fullNameUsers = users.map(function callback(user){
-return user.fullName();
-});
-console.table(fullNameUsers);
-
-
-
-// Age
-
-function isOldUsers(user){
-   return user.age>=Old_Age;
-}
-const oldUsers = users.filter(isOldUsers);
-console.table(oldUsers);
-
-
-// Сразу 3 тега поиска!!!
-
-function femaleAge(user){
-  return user.age<=female_Age && user.isMale===false && user.isSubscribe;
+  return num * factorial(num - 1);
 };
-const femaleUser = users.filter(femaleAge);
-console.table(femaleUser);
-
-
-const users = createRandomUsers(50);
-console.table(users);
+console.log(factorial(4));

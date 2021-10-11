@@ -15,12 +15,12 @@ function MyArrayProto(){
   }
   this.forEach = function(func){
     for(let i=0;i<this.length;i++){
-      func(this[i]);
+      func(this[i],i,this);
     }
   }
   this.some = function(func){
     for(let i=0;i<this.length;i++){
-      if(func(this[i])){
+      if(func(this[i],i,this)){
         return true;
       }
     }
@@ -28,7 +28,7 @@ function MyArrayProto(){
   }
   this.every = function(func){
     for(let i=0;i<this.length;i++){
-      if(func(this[i]) === false){
+      if(func(this[i],i,this) === false){
         return false;
       }
     }
@@ -37,7 +37,7 @@ function MyArrayProto(){
   this.filter = function(func){
     const result = new MyArray();
       for(let i=0; i<this.length;i++){
-        if(func(this[i])){
+        if(func(this[i],i,this)){
         result.push(this[i]);
       }
     }
@@ -47,7 +47,7 @@ function MyArrayProto(){
   this.map = function(func){
     const result = new MyArray();
     for(let i=0; i<this.length;i++){
-      if(func(this[i])){
+      if(func(this[i],i,this)){
         return result;
       }
     }
@@ -76,5 +76,5 @@ function bigTen(n){
   return n>5;
 }
 const myArray = new MyArray(1,1,1,10,11,190);
-console.log(myArray.filter(bigTen));
+// console.log(myArray.filter(bigTen));
 
