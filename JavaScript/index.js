@@ -516,6 +516,7 @@ function createRandomUsers(amount = 3){
   }
   return db;
 }
+
 const users = createRandomUsers(20);
 users.forEach(function(user){
   user.isSubscribe = (Math.random()>0.5)
