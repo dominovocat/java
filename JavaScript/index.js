@@ -549,3 +549,7 @@ function femaleAge(user){
 };
 const femaleUser = users.filter(femaleAge);
 console.table(femaleUser);
+
+
+const users = createRandomUsers(50);
+console.table(users);
