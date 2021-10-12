@@ -548,8 +548,6 @@
 // const users = createRandomUsers(50);
 // console.table(users);
 
-"use strict";
-
 // const site = {
 //   title: "Green site",
 //   headers: ["Header1", "Header2", "Header3", "Header4"],
@@ -587,18 +585,67 @@
 // }
 // recursion(4);
 
-const power = (num,exp)=>{
-  if(exp===1){
-    return num;
-  }
-  return -num * power(num,exp-1)
-}
-console.log(power(-3,4));
+// const power = (num,exp)=>{
+//   if(exp===1){
+//     return num;
+//   }
+//   return num * power(num,exp-1)
+// }
+// console.log(power(2,3));
 
-const factorial = (num) => {
-  if (num === 0 && 1) {
-    return 1;
-  }
-  return num * factorial(num - 1);
-};
-console.log(factorial(4));
+// const factorial = (num) => {
+//   if (num === 0) {
+//     return 1;
+//   }
+//   return num / factorial(num - 1);
+// };
+// console.log(factorial(4));
+
+// const maxNumber = (number1, number2) => {
+//   if (number1 > number2) {
+//     return number1;
+//   }
+//   return number2;
+// };
+// console.log(maxNumber(4, 3));
+
+// const maxOfTwoNumber = (n1, n2) => (n1 > n2 ? n1 : n2);
+// console.log(maxOfTwoNumber(4, 3));
+
+"use strict";
+
+// let arr = [12, 15, 20, 25, 59, 79]
+// function average(arr) {
+//   let sum = 0;
+//   let count = arr.length;
+//   for (i=0; i<count; i++) {
+//     sum += arr[i];
+//   }
+//   return sum+count;
+// }
+// console.log(average(arr));
+
+// const arr =[12,11,14,3,5,2];
+// function numbersMax(arr) {
+//   return Math.max.apply(null,arr);
+// }
+// console.log(numbersMax(arr))
+
+// const myString = 'Hello World. How are you doing?'
+// const splits = myString.split(' ')
+
+// console.log(splits)
+
+const str = "to be or not no be";
+
+function myString(str) {
+  // let newStr = str.toLowerCase();
+  let arrWords = str.split(" ");
+  const arrWordsUp = arrWords.map((word) => {
+    const letter = word[0].toUpperCase() + word.substring(1).toLowerCase();
+    return letter;
+  });
+  return arrWordsUp.join(" ");
+  // return newStr;
+}
+console.log(myString(str));

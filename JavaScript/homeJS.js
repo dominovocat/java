@@ -131,16 +131,16 @@ console.log(arr); */
 
 
 
-/* let arr = [12, 15, 20, 25, 59, 79]
-function average(arr) {
-  let sum = 0;
-  let count = arr.length;
-  for (i=0; i<count; i++) {
-    sum += arr[i];
-  }
-  return sum/count;
-}
-console.log(average(arr)) */
+// let arr = [12, 15, 20, 25, 59, 79]
+// function average(arr) {
+//   let sum = 0;
+//   let count = arr.length;
+//   for (i=0; i<count; i++) {
+//     sum += arr[i];
+//   }
+//   return sum/count;
+// }
+// console.log(average(arr));
 
 
 
