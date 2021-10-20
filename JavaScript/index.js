@@ -657,7 +657,7 @@ console.log(arr[4]);
 //линейная сложность императивный способ  0(n)
 const linearSearch = (arr, key) => {
   for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i])
+    console.log(arr[i]);
   }
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === key) {
@@ -666,7 +666,6 @@ const linearSearch = (arr, key) => {
   }
   return -1;
 };
-
 
 //квадратичная сложность 0(n^2)
 const createTableMult = (limit) => {
@@ -678,4 +677,27 @@ const createTableMult = (limit) => {
   }
   return table;
 };
-console.log(createTableMult(9));
+console.log(createTableMult());
+
+//логарифмическая сложность 0(log)
+
+const sortedArr = [1, 3, 5, 7, 8, 9, 10, 40];
+
+const binarySearch = (arr, key) => {
+  let start = 0;
+  let end = arr.length - 1;
+  let middle;
+  while (start <= end) {
+    middle = Math.round((start+end)/2);
+    if(arr[middle]===key){
+      return middle;
+    }
+    if(arr[middle]<key){
+      start = middle +1;
+    }else{
+      end = middle -1;
+    }
+  }
+  return -1;
+};
+console.log(binarySearch(sortedArr,10))
