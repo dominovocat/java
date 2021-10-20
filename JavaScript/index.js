@@ -636,16 +636,46 @@
 
 // console.log(splits)
 
-const str = "to be or not no be";
+// const str = "to be or not no be";
 
-function myString(str) {
-  // let newStr = str.toLowerCase();
-  let arrWords = str.split(" ");
-  const arrWordsUp = arrWords.map((word) => {
-    const letter = word[0].toUpperCase() + word.substring(1).toLowerCase();
-    return letter;
-  });
-  return arrWordsUp.join(" ");
-  // return newStr;
-}
-console.log(myString(str));
+// function myString(str) {
+//   // let newStr = str.toLowerCase();
+//   let arrWords = str.split(" ");
+//   const arrWordsUp = arrWords.map((word) => {
+//     const letter = word[0].toUpperCase() + word.substring(1).toLowerCase();
+//     return letter;
+//   });
+//   return arrWordsUp.join(" ");
+//   // return newStr;
+// }
+// console.log(myString(str));
+
+const arr = [31, 12, 1, 2, 41, 41, 4, 4, 4];
+//константная сложность   0(1)
+console.log(arr[4]);
+
+//линейная сложность императивный способ  0(n)
+const linearSearch = (arr, key) => {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i])
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === key) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+
+//квадратичная сложность 0(n^2)
+const createTableMult = (limit) => {
+  const table = [];
+  for (let i = 1; i <= limit; i++) {
+    for (let j = 1; j <= limit; j++) {
+      table.push(`${i}*${j}=${i * j}`);
+    }
+  }
+  return table;
+};
+console.log(createTableMult(9));
