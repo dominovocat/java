@@ -7,7 +7,6 @@ console.log(array3); */
 const reversed = array1.reverse();
 console.log(reversed); */
 
-
 /* const array1 = ['1','2','3'];
 const pushed = array1.push ('4','5','6');
 console.log(pushed);
@@ -20,7 +19,6 @@ console.log(arr);
 let arr1  = ['1','2','3'];
 arr1.unshift = ['6'];
 console.log(arr1); */
-
 
 /* let Array1 = ['js','css','html'];
 console.log(Array1);
@@ -58,10 +56,6 @@ console.log(sortArray) */
 /* let objArray = [js='test', jq='hello', css='world'];
 console.log(Object.keys(objArray)); */
 
-
-
-
-
 /* let hasElemArray = ['a', 'b', 'c', 'd', 'e',''];
 
 function hasElem(Array) {
@@ -73,9 +67,6 @@ function hasElem(Array) {
   return false;
 }
 console.log(hasElem(hasElemArray)); */
-
-
-
 
 /* const checkBox = [1,2,3,4,5,6,7];
 
@@ -89,7 +80,6 @@ return false;
 }
 console.log(check(checkBox)); */
 
-
 /* const checkBox2 = [1,2,3,4,5,6,7];
 
 function check (Array){
@@ -102,8 +92,6 @@ return false;
 }
 console.log(check(checkBox2)); */
 
- 
- 
 /*  Ничего не понятно, и ничего не работает... */
 /* function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -111,8 +99,6 @@ console.log(check(checkBox2)); */
   return Math.floor(Math.random() *  (max - min + 1)) + min;
 }
 console.log(getRandomInt(15,78)) */
-
-
 
 /* function random(min,max,a){
 let arr = [],m = [],n = 0;
@@ -128,9 +114,6 @@ let arr = random(15,78,10);
 
 console.log(arr); */
 
-
-
-
 // let arr = [12, 15, 20, 25, 59, 79]
 // function average(arr) {
 //   let sum = 0;
@@ -142,9 +125,6 @@ console.log(arr); */
 // }
 // console.log(average(arr));
 
-
-
-
 /* const numbers = [4, -2, 5, 19, -130, 0, 10];
 function numbersMax(numbers) {
   return Math.max.apply(null, numbers);
@@ -155,7 +135,47 @@ function numbersMin(numbers) {
 }
 console.log(numbersMin(numbers)); */
 
+class Figure3D {
+  constructor(name) {
+    this.name = name;
+  }
+  getVolume() {}
+}
 
+class Cylinder extends Figure3D {
+  constructor(r, h) {
+    super("Cylinder");
+    this.r = r;
+    this.h = h;
+  }
+  getVolume() {
+    return Math.PI * Math.pow(this.r, 2) * this.h;
+  }
+}
 
+class Ball extends Figure3D {
+  constructor(r) {
+    super("Ball");
+    this.r = r;
+  }
+  getVolume() {
+    return (4 / 3) * Math.PI * Math.pow(this.r, 3);
+  }
+}
 
+class Cube extends Figure3D {
+  constructor(h) {
+    super('Cube');
+    this.h = h;
+  }
+  getVolume() {
+    return Math.pow(this.h, 3);
+  }
+}
 
+const g = new Cube(12);
+const c = new Cylinder(12, 12);
+const b = new Ball(12);
+function getVolumeFigure(figure) {
+  return figure.getVolume();
+}
