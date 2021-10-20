@@ -135,47 +135,52 @@ function numbersMin(numbers) {
 }
 console.log(numbersMin(numbers)); */
 
-class Figure3D {
-  constructor(name) {
-    this.name = name;
-  }
-  getVolume() {}
-}
 
-class Cylinder extends Figure3D {
-  constructor(r, h) {
-    super("Cylinder");
-    this.r = r;
-    this.h = h;
-  }
-  getVolume() {
-    return Math.PI * Math.pow(this.r, 2) * this.h;
-  }
-}
 
-class Ball extends Figure3D {
-  constructor(r) {
-    super("Ball");
-    this.r = r;
-  }
-  getVolume() {
-    return (4 / 3) * Math.PI * Math.pow(this.r, 3);
-  }
-}
 
-class Cube extends Figure3D {
-  constructor(h) {
-    super('Cube');
-    this.h = h;
-  }
-  getVolume() {
-    return Math.pow(this.h, 3);
-  }
-}
 
-const g = new Cube(12);
-const c = new Cylinder(12, 12);
-const b = new Ball(12);
-function getVolumeFigure(figure) {
-  return figure.getVolume();
-}
+
+// class Figure3D {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   getVolume() {}
+// }
+
+// class Cylinder extends Figure3D {
+//   constructor(r, h) {
+//     super("Cylinder");
+//     this.r = r;
+//     this.h = h;
+//   }
+//   getVolume() {
+//     return Math.PI * Math.pow(this.r, 2) * this.h;
+//   }
+// }
+
+// class Ball extends Figure3D {
+//   constructor(r) {
+//     super("Ball");
+//     this.r = r;
+//   }
+//   getVolume() {
+//     return (4 / 3) * Math.PI * Math.pow(this.r, 3);
+//   }
+// }
+
+// class Cube extends Figure3D {
+//   constructor(h) {
+//     super("Cube");
+//     this.h = h;
+//   }
+//   getVolume() {
+//     return Math.pow(this.h, 3);
+//   }
+// }
+
+// const g = new Cube(12);
+// const c = new Cylinder(11, 12);
+// const b = new Ball(12);
+// function getVolumeFigure(figure) {
+//   return figure.getVolume();
+// }
