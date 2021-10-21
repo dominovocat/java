@@ -652,7 +652,7 @@
 
 const arr = [31, 12, 1, 2, 41, 41, 4, 4, 4];
 //константная сложность   0(1)
-console.log(arr[4]);
+// console.log(arr[4]);
 
 //линейная сложность императивный способ  0(n)
 const linearSearch = (arr, key) => {
@@ -677,7 +677,7 @@ const createTableMult = (limit) => {
   }
   return table;
 };
-console.log(createTableMult());
+// console.log(createTableMult());
 
 //логарифмическая сложность 0(log)
 
@@ -700,4 +700,6 @@ const binarySearch = (arr, key) => {
   }
   return -1;
 };
-console.log(binarySearch(sortedArr,10))
+// console.log(binarySearch(sortedArr,10));
+
+

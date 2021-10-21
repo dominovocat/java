@@ -57,4 +57,4 @@ class LinkedList{
 }
 
 const list = new LinkedList(1,true,{},[])
-console.log(...list)
+// console.log(...list)
