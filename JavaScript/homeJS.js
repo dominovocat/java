@@ -175,53 +175,53 @@ console.log(numbersMin(numbers)); */
 // }
 "use strict";
 
-class User {
-  constructor(name, surname) {
-    this.name = name;
-    this.surname = surname;
-  }
-  getfullName(){
-    return `${this._name} ${this._surname}`
-  }
-  get name(){
-    return this._name
-  }
-  get surname(){
-    return this._surname
-  }
-  set name(name){
-    if(typeof name === 'string'){
-      return this._name = name;
-    }
-    throw new TypeError('Name must be string');
-  }
-  set surname(surname){
-    if(typeof surname === 'string'){
-      return this._surname = surname;
-    }
-    throw new TypeError('Surname must be string');
-  }
-}
+// class User {
+//   constructor(name, surname) {
+//     this.name = name;
+//     this.surname = surname;
+//   }
+//   getfullName(){
+//     return `${this._name} ${this._surname}`
+//   }
+//   get name(){
+//     return this._name
+//   }
+//   get surname(){
+//     return this._surname
+//   }
+//   set name(name){
+//     if(typeof name === 'string'){
+//       return this._name = name;
+//     }
+//     throw new TypeError('Name must be string');
+//   }
+//   set surname(surname){
+//     if(typeof surname === 'string'){
+//       return this._surname = surname;
+//     }
+//     throw new TypeError('Surname must be string');
+//   }
+// }
 
-class Student extends User{
-  constructor(name,surname,yearOfAdmission){
-    super(name,surname,yearOfAdmission)
-    this.yearOfAdmission = yearOfAdmission;
-  }
-  getCourse(){
+// class Student extends User{
+//   constructor(name,surname,yearOfAdmission){
+//     super(name,surname,yearOfAdmission)
+//     this.yearOfAdmission = yearOfAdmission;
+//   }
+//   getCourse(){
 
-  }
-}
+//   }
+// }
 
 
-class Group{
-  constructor(name,students){
-    this.name = name;
-    this.students = students;
-  }
-  showStudents(){
-    return `${this.students}`
-  }
-}
+// class Group{
+//   constructor(name,students){
+//     this.name = name;
+//     this.students = students;
+//   }
+//   showStudents(){
+//     return `${this.students}`
+//   }
+// }
 
-console.log(myStudents.showStudents())
+// console.log(myStudents.showStudents())
