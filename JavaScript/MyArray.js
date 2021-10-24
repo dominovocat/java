@@ -60,6 +60,9 @@ function MyArrayProto(){
       delete this[this.length];
       return item;
   }
+  this.unShift = function(){
+   
+  }
   this.concat = function(){
     const result = new MyArray();
   }

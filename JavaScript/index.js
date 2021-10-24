@@ -700,6 +700,6 @@ const binarySearch = (arr, key) => {
   }
   return -1;
 };
-// console.log(binarySearch(sortedArr,10));
+console.log(binarySearch(sortedArr,5));
 
 

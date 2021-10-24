@@ -64,7 +64,7 @@ function hasElem(numbers,val) {
  });
 }
 console.log(hasElem(hasElemArray,''); */
- 
+
 // const checkBox = [1,2,3,4,5,6,7];
 
 // function check (numbers,val){
@@ -73,8 +73,6 @@ console.log(hasElem(hasElemArray,''); */
 //   });
 // }
 // console.log(check(checkBox,7));
-
-
 
 /* const checkBox2 = [1,2,3,4,5,6,7];
 
@@ -131,11 +129,6 @@ function numbersMin(numbers) {
 }
 console.log(numbersMin(numbers)); */
 
-
-
-
-
-
 // class Figure3D {
 //   constructor(name) {
 //     this.name = name;
@@ -180,8 +173,55 @@ console.log(numbersMin(numbers)); */
 // function getVolumeFigure(figure) {
 //   return figure.getVolume();
 // }
+"use strict";
+
+class User {
+  constructor(name, surname) {
+    this.name = name;
+    this.surname = surname;
+  }
+  getfullName(){
+    return `${this._name} ${this._surname}`
+  }
+  get name(){
+    return this._name
+  }
+  get surname(){
+    return this._surname
+  }
+  set name(name){
+    if(typeof name === 'string'){
+      return this._name = name;
+    }
+    throw new TypeError('Name must be string');
+  }
+  set surname(surname){
+    if(typeof surname === 'string'){
+      return this._surname = surname;
+    }
+    throw new TypeError('Surname must be string');
+  }
+}
+
+class Student extends User{
+  constructor(name,surname,yearOfAdmission){
+    super(name,surname,yearOfAdmission)
+    this.yearOfAdmission = yearOfAdmission;
+  }
+  getCourse(){
+
+  }
+}
 
 
-// class User{
-//   constructor(name,surname)
-// }
+class Group{
+  constructor(name,students){
+    this.name = name;
+    this.students = students;
+  }
+  showStudents(){
+    return `${this.students}`
+  }
+}
+
+console.log(myStudents.showStudents())
