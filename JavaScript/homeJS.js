@@ -58,18 +58,18 @@ console.log(Object.keys(objArray)); */
 
 /* let hasElemArray = ['a', 'b', 'c', 'd', 'e',''];
 
-function hasElem(array,val) {
- return array.some(function(arrayVal){
-   return val === arrayVal;
+function hasElem(numbers,val) {
+ return numbers.some(function(numbersVal){
+   return val === numbersVal;
  });
 }
 console.log(hasElem(hasElemArray,''); */
  
 // const checkBox = [1,2,3,4,5,6,7];
 
-// function check (array,val){
-//   return array.some(function(arrayVal){
-//     return val === arrayVal;
+// function check (numbers,val){
+//   return numbers.some(function(numbersVal){
+//     return val === numbersVal;
 //   });
 // }
 // console.log(check(checkBox,7));
