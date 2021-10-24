@@ -58,27 +58,23 @@ console.log(Object.keys(objArray)); */
 
 /* let hasElemArray = ['a', 'b', 'c', 'd', 'e',''];
 
-function hasElem(Array) {
-  for (let i = 0; i < Array.length; i++) {
-    if (Array[i] === '') {
-      return true;
-    }
-  }
-  return false;
+function hasElem(Array,val) {
+ return Array.some(function(ArrayVal){
+   return val === ArrayVal;
+ });
 }
-console.log(hasElem(hasElemArray)); */
+console.log(hasElem(hasElemArray,''); */
+ 
+// const checkBox = [1,2,3,4,5,6,7];
 
-/* const checkBox = [1,2,3,4,5,6,7];
+// function check (Array,val){
+//   return Array.some(function(ArrayVal){
+//     return val === ArrayVal;
+//   });
+// }
+// console.log(check(checkBox,7));
 
-function check (Array){
-for (let i = 0; i<Array.length; i++) {
-  if (Array[i] === 7){
-  return true
-  }
-}
-return false;
-}
-console.log(check(checkBox)); */
+
 
 /* const checkBox2 = [1,2,3,4,5,6,7];
 
@@ -183,4 +179,9 @@ console.log(numbersMin(numbers)); */
 // const b = new Ball(12);
 // function getVolumeFigure(figure) {
 //   return figure.getVolume();
+// }
+
+
+// class User{
+//   constructor(name,surname)
 // }
