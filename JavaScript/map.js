@@ -4,11 +4,32 @@ const obj = {
   prop:123,
 }
 
-const map1 = new Map();
-map1.set(1,'one');
-map1.set(obj,'object');
+const dictionary = new Map();
+dictionary.set('собака','dog');
+dictionary.set('кот','cat');
+dictionary.set('кофе','coffee');
+dictionary.set('дом','home');
+dictionary.set('ребёнок','kid');
+dictionary.set('змея','snake');
+dictionary.set('ветер','wind');
+dictionary.set('огонь','fire');
+dictionary.set('взять','take');
+dictionary.set('смотреть','watch');
+dictionary.set('этаж','flor');
+dictionary.set('небо','sky');
 
-console.log(map1.get(obj));
+const str = 'Собака огонь смотреть ребёнок этаж взять кот';
 
-
-map1.delete(1);
+const translate = (str)=>{
+  const lowerCaseStr = str.toLowerCase();
+  const wordsArray = lowerCaseStr.split(' ');
+  const wordsTranslatedArray = wordsArray.map((word)=>{
+    if(dictionary.has(word)){
+      return dictionary.get(word);
+    }
+    return word;
+  });
+  const translatedStr = wordsTranslatedArray.join(' ');
+  return translatedStr;
+}
+console.log(translate(str))
